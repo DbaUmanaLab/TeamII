@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace FinestraArticoli
 {
-    public   class Store
+    public class Store
     {
 
-        public void SaveDataGrid(SaveFileDialog saveFileDialog,Articolo[] articoli)
+        public void SaveDataGrid(SaveFileDialog saveFileDialog, Articolo[] articoli)
         {
             DialogResult result = saveFileDialog.ShowDialog();
             if (!DialogResult.OK.Equals(result))
