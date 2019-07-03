@@ -75,7 +75,7 @@
             this.tabPageInitial.Size = new System.Drawing.Size(1450, 718);
             this.tabPageInitial.TabIndex = 0;
             this.tabPageInitial.Text = "Pagina Iniziale";
-            this.tabPageInitial.Click += new System.EventHandler(this.TabPage1_Click);
+            this.tabPageInitial.Click += new System.EventHandler(this.TabPageInitial_Click);
             // 
             // sellingButton
             // 
@@ -149,7 +149,7 @@
             this.dataGV.Name = "dataGV";
             this.dataGV.Size = new System.Drawing.Size(1444, 603);
             this.dataGV.TabIndex = 0;
-            this.dataGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.dataGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGV_CellContentClick);
             // 
             // tabPageProvision
             // 
