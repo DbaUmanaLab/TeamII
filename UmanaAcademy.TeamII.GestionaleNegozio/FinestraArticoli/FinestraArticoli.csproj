@@ -80,5 +80,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\FattureRifornimento\" />
+    <Folder Include="Files\FattureVendita\" />
+    <Folder Include="Files\Magazzino\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
