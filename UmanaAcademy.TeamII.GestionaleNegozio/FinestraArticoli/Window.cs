@@ -10,14 +10,29 @@ using System.Windows.Forms;
 
 namespace FinestraArticoli
 {
-    public partial class Form1 : Form
+    public partial class window : Form
     {
-        public Form1()
+        public window()
         {
             InitializeComponent();
         }
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
