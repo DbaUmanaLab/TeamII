@@ -36,5 +36,10 @@ namespace FinestraArticoli
         {
 
         }
+
+        private void VisualButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
