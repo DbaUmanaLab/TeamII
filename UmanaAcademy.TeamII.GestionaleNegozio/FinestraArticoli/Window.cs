@@ -15,12 +15,8 @@ namespace FinestraArticoli
 {
     public partial class window : Form
     {
-<<<<<<< HEAD
-
         private int actualTabPage = 0;
-=======
         private List<Articolo> articoli;
->>>>>>> a6cdab9c16da9f99d3380335435b3408633bf62e
 
         public window()
         {
@@ -47,6 +43,13 @@ namespace FinestraArticoli
         {
             actualTabPage = 1;
             tabControl.SelectedTab = tabPageVisual;
+            using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
+            using (var csv = new CsvReader(reader))
+            {
+                csv.Configuration.Delimiter = ",";
+                csv.Read();
+                articoli = csv.GetRecords<Articolo>().ToList();
+            }
         }
 
         private void ProvisionButton_Click(object sender, EventArgs e)
@@ -59,22 +62,6 @@ namespace FinestraArticoli
         {
             actualTabPage = 3;
             tabControl.SelectedTab = tabPageSelling;
-        }
-
-<<<<<<< HEAD
-        private void Label_Click(object sender, EventArgs e)
-=======
-
-        private void VisualButton_Click(object sender, EventArgs e)
->>>>>>> a6cdab9c16da9f99d3380335435b3408633bf62e
-        {
-            using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
-            using (var csv = new CsvReader(reader))
-            {
-                csv.Configuration.Delimiter = ",";
-                csv.Read();
-                articoli = csv.GetRecords<Articolo>().ToList();
-            }
         }
 
         private void DataGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
