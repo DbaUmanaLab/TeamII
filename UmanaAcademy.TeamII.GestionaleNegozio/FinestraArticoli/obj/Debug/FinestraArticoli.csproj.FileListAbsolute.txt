@@ -1,0 +1,15 @@
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\bin\Debug\FinestraArticoli.exe.config
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\bin\Debug\FinestraArticoli.exe
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\bin\Debug\FinestraArticoli.pdb
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\bin\Debug\CsvHelper.dll
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\bin\Debug\System.ValueTuple.dll
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\bin\Debug\CsvHelper.xml
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\bin\Debug\System.ValueTuple.xml
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.csprojAssemblyReference.cache
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.Form1.resources
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.Properties.Resources.resources
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.csproj.GenerateResource.cache
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.csproj.CoreCompileInputs.cache
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.csproj.CopyComplete
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.exe
+C:\Academy\Progetto SCRUM\TeamII\UmanaAcademy.TeamII.GestionaleNegozio\FinestraArticoli\obj\Debug\FinestraArticoli.pdb
