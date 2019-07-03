@@ -74,9 +74,16 @@ namespace FinestraArticoli
 
         }
 
+<<<<<<< HEAD
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Store.SaveDataGrid(saveFileDialog, articoli);
+        }
+=======
         //private void Button1_Click(object sender, EventArgs e)
         //{
         //    SaveDataGrid(saveFileDialog, articoli);
         //}
+>>>>>>> bf3a731d1c1d101074d039103387ef9ab23206a5
     }
 }
