@@ -33,11 +33,13 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(623, 260);
+            this.listView1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listView1.Location = new System.Drawing.Point(45, 128);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(121, 97);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // Form1
             // 

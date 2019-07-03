@@ -16,5 +16,10 @@ namespace FinestraArticoli
         {
             InitializeComponent();
         }
+
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
