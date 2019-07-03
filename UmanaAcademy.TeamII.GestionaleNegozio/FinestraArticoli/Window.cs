@@ -20,8 +20,8 @@ namespace FinestraArticoli
         {
             if ((tabControl.SelectedTab == tabPageVisual) || (tabControl.SelectedTab == tabPageProvision) || (tabControl.SelectedTab == tabPageSelling))
             {
-                MessageBox.Show("Seleziona un pulsante.");
                 tabControl.SelectedTab = tabPageInitial;
+                MessageBox.Show("Seleziona un pulsante.");
             }
         }
 
