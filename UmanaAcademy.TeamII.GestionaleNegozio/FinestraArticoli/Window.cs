@@ -15,12 +15,7 @@ namespace FinestraArticoli
 {
     public partial class window : Form
     {
-<<<<<<< HEAD
-
-        private int actualTabPage = 0;
-=======
         private List<Articolo> articoli;
->>>>>>> a6cdab9c16da9f99d3380335435b3408633bf62e
 
         public window()
         {
@@ -30,43 +25,28 @@ namespace FinestraArticoli
         {
             if ((tabControl.SelectedTab == tabPageVisual) || (tabControl.SelectedTab == tabPageProvision) || (tabControl.SelectedTab == tabPageSelling))
             {
-                tabControl.SelectedIndex = actualTabPage;
-                if(actualTabPage == 0)
-                    MessageBox.Show("Seleziona un pulsante.");
-                else
-                    MessageBox.Show("Torna alla schermata iniziale per selezionare un'altra schermata.");
+                tabControl.SelectedTab = tabPageInitial;
+                MessageBox.Show("Seleziona un pulsante.");
             }
         }
 
         private void TabPageInitial_Click(object sender, EventArgs e)
         {
-            actualTabPage = 0;
+
         }
 
-        private void VisualButton_Click(object sender, EventArgs e)
-        {
-            actualTabPage = 1;
-            tabControl.SelectedTab = tabPageVisual;
-        }
-
-        private void ProvisionButton_Click(object sender, EventArgs e)
-        {
-            actualTabPage = 2;
-            tabControl.SelectedTab = tabPageProvision;
-        }
-
-        private void SellingButton_Click(object sender, EventArgs e)
-        {
-            actualTabPage = 3;
-            tabControl.SelectedTab = tabPageSelling;
-        }
-
-<<<<<<< HEAD
         private void Label_Click(object sender, EventArgs e)
-=======
+        {
+
+        }
+
+        private void DataGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
         private void VisualButton_Click(object sender, EventArgs e)
->>>>>>> a6cdab9c16da9f99d3380335435b3408633bf62e
         {
             using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
             using (var csv = new CsvReader(reader))
@@ -77,7 +57,7 @@ namespace FinestraArticoli
             }
         }
 
-        private void DataGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ProvisionButton_Click(object sender, EventArgs e)
         {
 
         }
@@ -87,16 +67,9 @@ namespace FinestraArticoli
 
         }
 
-<<<<<<< HEAD
         private void Button1_Click(object sender, EventArgs e)
         {
             Store.SaveDataGrid(saveFileDialog, articoli);
         }
-=======
-        //private void Button1_Click(object sender, EventArgs e)
-        //{
-        //    SaveDataGrid(saveFileDialog, articoli);
-        //}
->>>>>>> bf3a731d1c1d101074d039103387ef9ab23206a5
     }
 }
