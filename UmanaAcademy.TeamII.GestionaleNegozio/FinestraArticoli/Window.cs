@@ -21,26 +21,30 @@ namespace FinestraArticoli
         {
             InitializeComponent();
         }
+        private void tabControl_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if ((tabControl.SelectedTab == tabPageVisual) || (tabControl.SelectedTab == tabPageProvision) || (tabControl.SelectedTab == tabPageSelling))
+            {
+                tabControl.SelectedTab = tabPageInitial;
+                MessageBox.Show("Seleziona un pulsante.");
+            }
+        }
 
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabPageInitial_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TabPage1_Click(object sender, EventArgs e)
+        private void Label_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        private void DataGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void VisualButton_Click(object sender, EventArgs e)
         {
@@ -51,6 +55,21 @@ namespace FinestraArticoli
                 csv.Read();
                 articoli = csv.GetRecords<Articolo>().ToList();
             }
+        }
+
+        private void ProvisionButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Window_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            SaveDataGrid(saveFileDialog, articoli);
         }
     }
 }
