@@ -40,6 +40,7 @@
             this.tabPageSelling = new System.Windows.Forms.TabPage();
             this.saveProductsButton = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tabControl.SuspendLayout();
             this.tabPageInitial.SuspendLayout();
             this.tabPageVisual.SuspendLayout();
@@ -167,6 +168,10 @@
             this.saveProductsButton.Text = "Salva";
             this.saveProductsButton.UseVisualStyleBackColor = true;
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
             // window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +205,7 @@
         private System.Windows.Forms.TabPage tabPageSelling;
         private System.Windows.Forms.Button saveProductsButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
