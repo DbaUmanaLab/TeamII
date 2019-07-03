@@ -58,6 +58,8 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1458, 744);
             this.tabControl.TabIndex = 0;
+            this.tabControl.Click += new System.EventHandler(this.tabControl_SelectedIndexChanged);
+            //this.tabControl.TabPages.Remove(tabPageVisual);
             // 
             // tabPageInitial
             // 
@@ -93,7 +95,7 @@
             this.provisionButton.TabIndex = 2;
             this.provisionButton.Text = "Rifornimento";
             this.provisionButton.UseVisualStyleBackColor = true;
-            this.provisionButton.Click += new System.EventHandler(this.Button1_Click);
+            this.provisionButton.Click += new System.EventHandler(this.ProvisionButton_Click);
             // 
             // visualButton
             // 
