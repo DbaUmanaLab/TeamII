@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinestraArticoli.Model
 {
-    class Articolo
+    public    class Articolo
     {
 
         public string Type { get; set; }

@@ -59,5 +59,10 @@ namespace FinestraArticoli
         {
 
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            SaveDataGrid(saveFileDialog, articoli);
+        }
     }
 }

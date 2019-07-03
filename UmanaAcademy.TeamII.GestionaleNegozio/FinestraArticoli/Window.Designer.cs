@@ -35,12 +35,13 @@
             this.visualButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabPageVisual = new System.Windows.Forms.TabPage();
+            this.saveProductsButton = new System.Windows.Forms.Button();
             this.dataGV = new System.Windows.Forms.DataGridView();
             this.tabPageProvision = new System.Windows.Forms.TabPage();
             this.tabPageSelling = new System.Windows.Forms.TabPage();
-            this.saveProductsButton = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageInitial.SuspendLayout();
             this.tabPageVisual.SuspendLayout();
@@ -59,11 +60,11 @@
             this.tabControl.Size = new System.Drawing.Size(1458, 744);
             this.tabControl.TabIndex = 0;
             this.tabControl.Click += new System.EventHandler(this.tabControl_SelectedIndexChanged);
-            //this.tabControl.TabPages.Remove(tabPageVisual);
             // 
             // tabPageInitial
             // 
             this.tabPageInitial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tabPageInitial.Controls.Add(this.button1);
             this.tabPageInitial.Controls.Add(this.sellingButton);
             this.tabPageInitial.Controls.Add(this.provisionButton);
             this.tabPageInitial.Controls.Add(this.visualButton);
@@ -130,6 +131,16 @@
             this.tabPageVisual.TabIndex = 1;
             this.tabPageVisual.Text = "Visualizza Articoli";
             // 
+            // saveProductsButton
+            // 
+            this.saveProductsButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveProductsButton.Location = new System.Drawing.Point(589, 612);
+            this.saveProductsButton.Name = "saveProductsButton";
+            this.saveProductsButton.Size = new System.Drawing.Size(299, 91);
+            this.saveProductsButton.TabIndex = 3;
+            this.saveProductsButton.Text = "Salva";
+            this.saveProductsButton.UseVisualStyleBackColor = true;
+            // 
             // dataGV
             // 
             this.dataGV.BackgroundColor = System.Drawing.Color.White;
@@ -160,19 +171,19 @@
             this.tabPageSelling.TabIndex = 3;
             this.tabPageSelling.Text = "Vendita";
             // 
-            // saveProductsButton
-            // 
-            this.saveProductsButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveProductsButton.Location = new System.Drawing.Point(589, 612);
-            this.saveProductsButton.Name = "saveProductsButton";
-            this.saveProductsButton.Size = new System.Drawing.Size(299, 91);
-            this.saveProductsButton.TabIndex = 3;
-            this.saveProductsButton.Text = "Salva";
-            this.saveProductsButton.UseVisualStyleBackColor = true;
-            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(229, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // window
             // 
@@ -208,6 +219,7 @@
         private System.Windows.Forms.Button saveProductsButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button button1;
     }
 }
 
