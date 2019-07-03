@@ -30,12 +30,12 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageInitial = new System.Windows.Forms.TabPage();
+            this.sellingButton = new System.Windows.Forms.Button();
+            this.provisionButton = new System.Windows.Forms.Button();
             this.visualButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.tabPageVisual = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPageProvision = new System.Windows.Forms.TabPage();
             this.tabPageSelling = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
@@ -59,10 +59,10 @@
             // tabPageInitial
             // 
             this.tabPageInitial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tabPageInitial.Controls.Add(this.button2);
-            this.tabPageInitial.Controls.Add(this.button1);
+            this.tabPageInitial.Controls.Add(this.sellingButton);
+            this.tabPageInitial.Controls.Add(this.provisionButton);
             this.tabPageInitial.Controls.Add(this.visualButton);
-            this.tabPageInitial.Controls.Add(this.label1);
+            this.tabPageInitial.Controls.Add(this.titleLabel);
             this.tabPageInitial.Location = new System.Drawing.Point(4, 22);
             this.tabPageInitial.Name = "tabPageInitial";
             this.tabPageInitial.Padding = new System.Windows.Forms.Padding(3);
@@ -70,6 +70,27 @@
             this.tabPageInitial.TabIndex = 0;
             this.tabPageInitial.Text = "Pagina Iniziale";
             this.tabPageInitial.Click += new System.EventHandler(this.TabPage1_Click);
+            // 
+            // sellingButton
+            // 
+            this.sellingButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellingButton.Location = new System.Drawing.Point(1035, 363);
+            this.sellingButton.Name = "sellingButton";
+            this.sellingButton.Size = new System.Drawing.Size(299, 145);
+            this.sellingButton.TabIndex = 3;
+            this.sellingButton.Text = "Vendita";
+            this.sellingButton.UseVisualStyleBackColor = true;
+            // 
+            // provisionButton
+            // 
+            this.provisionButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provisionButton.Location = new System.Drawing.Point(589, 363);
+            this.provisionButton.Name = "provisionButton";
+            this.provisionButton.Size = new System.Drawing.Size(299, 145);
+            this.provisionButton.TabIndex = 2;
+            this.provisionButton.Text = "Rifornimento";
+            this.provisionButton.UseVisualStyleBackColor = true;
+            this.provisionButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // visualButton
             // 
@@ -82,15 +103,15 @@
             this.visualButton.UseVisualStyleBackColor = true;
             this.visualButton.Click += new System.EventHandler(this.VisualButton_Click);
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(462, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(481, 140);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GESTIONALE NEGOZIO DA MI, TI E TONI";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titleLabel.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(462, 59);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(481, 140);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "GESTIONALE NEGOZIO DA MI, TI E TONI";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPageVisual
             // 
@@ -113,26 +134,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1444, 712);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(512, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(299, 145);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Visualizza Articoli";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(878, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(299, 145);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Visualizza Articoli";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // tabPageProvision
             // 
@@ -164,6 +165,7 @@
             this.MaximizeBox = false;
             this.Name = "window";
             this.Text = "Gestionale Negozio da Mi, Ti & Toni";
+            this.Load += new System.EventHandler(this.Window_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPageInitial.ResumeLayout(false);
             this.tabPageVisual.ResumeLayout(false);
@@ -178,10 +180,10 @@
         private System.Windows.Forms.TabPage tabPageInitial;
         private System.Windows.Forms.TabPage tabPageVisual;
         private System.Windows.Forms.Button visualButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sellingButton;
+        private System.Windows.Forms.Button provisionButton;
         private System.Windows.Forms.TabPage tabPageProvision;
         private System.Windows.Forms.TabPage tabPageSelling;
     }
