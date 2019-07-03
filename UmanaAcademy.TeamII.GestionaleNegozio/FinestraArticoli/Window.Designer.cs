@@ -72,6 +72,7 @@
             this.visualButton.TabIndex = 1;
             this.visualButton.Text = "Visualizza Articoli";
             this.visualButton.UseVisualStyleBackColor = true;
+            this.visualButton.Click += new System.EventHandler(this.VisualButton_Click);
             // 
             // label1
             // 
