@@ -13,11 +13,7 @@ namespace FinestraArticoli
     public class Store
     {
 
-<<<<<<< HEAD
         public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<Articolo> articoli)
-=======
-        public void SaveDataGrid(SaveFileDialog saveFileDialog, Articolo[] articoli)
->>>>>>> bf3a731d1c1d101074d039103387ef9ab23206a5
         {
             DialogResult result = saveFileDialog.ShowDialog();
             if (!DialogResult.OK.Equals(result))
@@ -29,5 +25,6 @@ namespace FinestraArticoli
                 csvWriter.WriteRecords<Articolo>(articoli);
             }
         }
+
     }
 }

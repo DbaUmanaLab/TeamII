@@ -30,6 +30,7 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageInitial = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.sellingButton = new System.Windows.Forms.Button();
             this.provisionButton = new System.Windows.Forms.Button();
             this.visualButton = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.tabPageSelling = new System.Windows.Forms.TabPage();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageInitial.SuspendLayout();
             this.tabPageVisual.SuspendLayout();
@@ -77,6 +77,15 @@
             this.tabPageInitial.Text = "Pagina Iniziale";
             this.tabPageInitial.Click += new System.EventHandler(this.TabPageInitial_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(229, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // sellingButton
             // 
             this.sellingButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,7 +95,6 @@
             this.sellingButton.TabIndex = 3;
             this.sellingButton.Text = "Vendita";
             this.sellingButton.UseVisualStyleBackColor = true;
-            this.sellingButton.Click += new System.EventHandler(this.SellingButton_Click);
             // 
             // provisionButton
             // 
@@ -141,6 +149,7 @@
             this.saveProductsButton.TabIndex = 3;
             this.saveProductsButton.Text = "Salva";
             this.saveProductsButton.UseVisualStyleBackColor = true;
+            this.saveProductsButton.Click += new System.EventHandler(this.SaveProductsButton_Click);
             // 
             // dataGV
             // 
@@ -175,16 +184,6 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(229, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            //this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // window
             // 
