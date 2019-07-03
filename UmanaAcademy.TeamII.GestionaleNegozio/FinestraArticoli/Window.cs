@@ -16,6 +16,14 @@ namespace FinestraArticoli
         {
             InitializeComponent();
         }
+        private void tabControl_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if ((tabControl.SelectedTab == tabPageVisual) || (tabControl.SelectedTab == tabPageProvision) || (tabControl.SelectedTab == tabPageSelling))
+            {
+                MessageBox.Show("Seleziona un pulsante.");
+                tabControl.SelectedTab = tabPageInitial;
+            }
+        }
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
