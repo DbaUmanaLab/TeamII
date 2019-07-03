@@ -35,13 +35,15 @@
             this.visualButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabPageVisual = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGV = new System.Windows.Forms.DataGridView();
             this.tabPageProvision = new System.Windows.Forms.TabPage();
             this.tabPageSelling = new System.Windows.Forms.TabPage();
+            this.saveProductsButton = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tabControl.SuspendLayout();
             this.tabPageInitial.SuspendLayout();
             this.tabPageVisual.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -116,7 +118,8 @@
             // tabPageVisual
             // 
             this.tabPageVisual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tabPageVisual.Controls.Add(this.dataGridView1);
+            this.tabPageVisual.Controls.Add(this.saveProductsButton);
+            this.tabPageVisual.Controls.Add(this.dataGV);
             this.tabPageVisual.Location = new System.Drawing.Point(4, 22);
             this.tabPageVisual.Name = "tabPageVisual";
             this.tabPageVisual.Padding = new System.Windows.Forms.Padding(3);
@@ -124,16 +127,15 @@
             this.tabPageVisual.TabIndex = 1;
             this.tabPageVisual.Text = "Visualizza Articoli";
             // 
-            // dataGridView1
+            // dataGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1444, 712);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.dataGV.BackgroundColor = System.Drawing.Color.White;
+            this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGV.Location = new System.Drawing.Point(3, 3);
+            this.dataGV.Name = "dataGV";
+            this.dataGV.Size = new System.Drawing.Size(1444, 603);
+            this.dataGV.TabIndex = 0;
+            this.dataGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // tabPageProvision
             // 
@@ -155,6 +157,16 @@
             this.tabPageSelling.TabIndex = 3;
             this.tabPageSelling.Text = "Vendita";
             // 
+            // saveProductsButton
+            // 
+            this.saveProductsButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveProductsButton.Location = new System.Drawing.Point(589, 612);
+            this.saveProductsButton.Name = "saveProductsButton";
+            this.saveProductsButton.Size = new System.Drawing.Size(299, 91);
+            this.saveProductsButton.TabIndex = 3;
+            this.saveProductsButton.Text = "Salva";
+            this.saveProductsButton.UseVisualStyleBackColor = true;
+            // 
             // window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,7 +181,7 @@
             this.tabControl.ResumeLayout(false);
             this.tabPageInitial.ResumeLayout(false);
             this.tabPageVisual.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,11 +193,13 @@
         private System.Windows.Forms.TabPage tabPageVisual;
         private System.Windows.Forms.Button visualButton;
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGV;
         private System.Windows.Forms.Button sellingButton;
         private System.Windows.Forms.Button provisionButton;
         private System.Windows.Forms.TabPage tabPageProvision;
         private System.Windows.Forms.TabPage tabPageSelling;
+        private System.Windows.Forms.Button saveProductsButton;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
