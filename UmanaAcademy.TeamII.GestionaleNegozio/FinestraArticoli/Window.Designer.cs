@@ -34,6 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageVisual = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabPageProvision = new System.Windows.Forms.TabPage();
+            this.tabPageSelling = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             this.tabPageInitial.SuspendLayout();
             this.tabPageVisual.SuspendLayout();
@@ -44,6 +48,8 @@
             // 
             this.tabControl.Controls.Add(this.tabPageInitial);
             this.tabControl.Controls.Add(this.tabPageVisual);
+            this.tabControl.Controls.Add(this.tabPageProvision);
+            this.tabControl.Controls.Add(this.tabPageSelling);
             this.tabControl.Location = new System.Drawing.Point(-1, -1);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -53,6 +59,8 @@
             // tabPageInitial
             // 
             this.tabPageInitial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tabPageInitial.Controls.Add(this.button2);
+            this.tabPageInitial.Controls.Add(this.button1);
             this.tabPageInitial.Controls.Add(this.visualButton);
             this.tabPageInitial.Controls.Add(this.label1);
             this.tabPageInitial.Location = new System.Drawing.Point(4, 22);
@@ -68,7 +76,7 @@
             this.visualButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualButton.Location = new System.Drawing.Point(154, 363);
             this.visualButton.Name = "visualButton";
-            this.visualButton.Size = new System.Drawing.Size(1148, 145);
+            this.visualButton.Size = new System.Drawing.Size(299, 145);
             this.visualButton.TabIndex = 1;
             this.visualButton.Text = "Visualizza Articoli";
             this.visualButton.UseVisualStyleBackColor = true;
@@ -105,6 +113,46 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(512, 363);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(299, 145);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Visualizza Articoli";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(878, 363);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(299, 145);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Visualizza Articoli";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // tabPageProvision
+            // 
+            this.tabPageProvision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tabPageProvision.Location = new System.Drawing.Point(4, 22);
+            this.tabPageProvision.Name = "tabPageProvision";
+            this.tabPageProvision.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProvision.Size = new System.Drawing.Size(1450, 718);
+            this.tabPageProvision.TabIndex = 2;
+            this.tabPageProvision.Text = "Rifornimento";
+            // 
+            // tabPageSelling
+            // 
+            this.tabPageSelling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tabPageSelling.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSelling.Name = "tabPageSelling";
+            this.tabPageSelling.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSelling.Size = new System.Drawing.Size(1450, 718);
+            this.tabPageSelling.TabIndex = 3;
+            this.tabPageSelling.Text = "Vendita";
+            // 
             // window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +179,10 @@
         private System.Windows.Forms.Button visualButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPageProvision;
+        private System.Windows.Forms.TabPage tabPageSelling;
     }
 }
 
