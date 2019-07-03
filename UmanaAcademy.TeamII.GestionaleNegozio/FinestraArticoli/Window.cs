@@ -25,22 +25,17 @@ namespace FinestraArticoli
             }
         }
 
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabPageInitial_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TabPage1_Click(object sender, EventArgs e)
+        private void Label_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
