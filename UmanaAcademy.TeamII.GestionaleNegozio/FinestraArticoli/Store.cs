@@ -68,5 +68,9 @@ namespace FinestraArticoli
             }
         }
 
+        internal static void SaveDataGrid(object saveFileDialog, List<Articolo> articoli)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
