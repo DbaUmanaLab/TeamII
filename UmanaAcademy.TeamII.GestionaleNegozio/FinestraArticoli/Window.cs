@@ -30,6 +30,8 @@ namespace FinestraArticoli
                 tabControl.SelectedIndex = actualTabPage;
                 MessageBox.Show("Cambia scheda nella pagina iniziale");
             }
+            else
+                actualTabPage = 0;
         }
 
         private void TabPageInitial_Click(object sender, EventArgs e)
