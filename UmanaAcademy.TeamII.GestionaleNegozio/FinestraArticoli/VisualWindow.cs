@@ -23,6 +23,7 @@ namespace FinestraArticoli
             using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
             using (var csv = new CsvReader(reader))
             {
+                csv.Configuration.RegisterClassMap<ArticoloMap>();
                 csv.Configuration.Delimiter = ",";
                 csv.Read();
                 articoli = csv.GetRecords<Articolo>().ToList();

@@ -53,7 +53,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\ArticoloMap.cs" />
+    <Compile Include="ProvisionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvisionWindow.Designer.cs">
+      <DependentUpon>ProvisionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellingWindow.Designer.cs">
+      <DependentUpon>SellingWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Store.cs" />
+    <Compile Include="VisualWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualWindow.Designer.cs">
+      <DependentUpon>VisualWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +81,15 @@
     <Compile Include="Model\Articolo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ProvisionWindow.resx">
+      <DependentUpon>ProvisionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellingWindow.resx">
+      <DependentUpon>SellingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualWindow.resx">
+      <DependentUpon>VisualWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>
