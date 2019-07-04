@@ -32,6 +32,9 @@ namespace FinestraArticoli.Model
 
         [Index(21)]
         public double? Categories { get; set; }
+        public bool OutOfStock { get; set; }
+
+        public string StockRunningOut { get; set; }
 
     }
 }
