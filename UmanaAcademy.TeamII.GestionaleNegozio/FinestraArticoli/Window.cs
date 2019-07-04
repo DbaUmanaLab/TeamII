@@ -28,7 +28,7 @@ namespace FinestraArticoli
             if ((tabControl.SelectedTab == tabPageVisual) || (tabControl.SelectedTab == tabPageProvision) || (tabControl.SelectedTab == tabPageSelling))
             {
                 tabControl.SelectedIndex = actualTabPage;
-                MessageBox.Show("Cambia scheda nella pagina iniziale");
+                MessageBox.Show("Cambia scheda nella pagina iniziale.");
             }
             else
                 actualTabPage = 0;
