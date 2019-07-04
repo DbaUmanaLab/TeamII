@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\ArticoloMap.cs" />
+    <Compile Include="Model\FatturaAcquisti.cs" />
+    <Compile Include="Model\FatturaVendita.cs" />
     <Compile Include="Model\Mail.cs" />
     <Compile Include="ProvisionWindow.cs">
       <SubType>Form</SubType>
