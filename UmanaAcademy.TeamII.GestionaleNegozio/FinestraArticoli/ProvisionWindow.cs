@@ -21,5 +21,10 @@ namespace FinestraArticoli
         {
 
         }
+
+        private void ProvisionButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

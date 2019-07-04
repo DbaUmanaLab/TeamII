@@ -38,7 +38,7 @@
             // 
             this.provisionDataGV.BackgroundColor = System.Drawing.Color.White;
             this.provisionDataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.provisionDataGV.Location = new System.Drawing.Point(12, 82);
+            this.provisionDataGV.Location = new System.Drawing.Point(12, 75);
             this.provisionDataGV.Name = "provisionDataGV";
             this.provisionDataGV.Size = new System.Drawing.Size(1001, 603);
             this.provisionDataGV.TabIndex = 0;
@@ -46,9 +46,9 @@
             // provisionLabel
             // 
             this.provisionLabel.Font = new System.Drawing.Font("MV Boli", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.provisionLabel.Location = new System.Drawing.Point(352, 22);
+            this.provisionLabel.Location = new System.Drawing.Point(12, 22);
             this.provisionLabel.Name = "provisionLabel";
-            this.provisionLabel.Size = new System.Drawing.Size(304, 35);
+            this.provisionLabel.Size = new System.Drawing.Size(1001, 35);
             this.provisionLabel.TabIndex = 7;
             this.provisionLabel.Text = "Rifornimento";
             this.provisionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,12 +56,13 @@
             // provisionButton
             // 
             this.provisionButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.provisionButton.Location = new System.Drawing.Point(357, 691);
+            this.provisionButton.Location = new System.Drawing.Point(363, 684);
             this.provisionButton.Name = "provisionButton";
             this.provisionButton.Size = new System.Drawing.Size(299, 91);
             this.provisionButton.TabIndex = 8;
-            this.provisionButton.Text = "Salva";
+            this.provisionButton.Text = "Compra";
             this.provisionButton.UseVisualStyleBackColor = true;
+            this.provisionButton.Click += new System.EventHandler(this.ProvisionButton_Click);
             // 
             // ProvisionWindow
             // 

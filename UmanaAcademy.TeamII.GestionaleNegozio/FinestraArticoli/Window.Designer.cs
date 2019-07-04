@@ -43,9 +43,9 @@
             // titleLabel
             // 
             this.titleLabel.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(327, 71);
+            this.titleLabel.Location = new System.Drawing.Point(12, 73);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(481, 140);
+            this.titleLabel.Size = new System.Drawing.Size(1115, 140);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "GESTIONALE NEGOZIO DA MI, TI E TONI";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,7 +54,7 @@
             // visualButton
             // 
             this.visualButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.visualButton.Location = new System.Drawing.Point(37, 331);
+            this.visualButton.Location = new System.Drawing.Point(41, 331);
             this.visualButton.Name = "visualButton";
             this.visualButton.Size = new System.Drawing.Size(299, 145);
             this.visualButton.TabIndex = 1;
@@ -65,7 +65,7 @@
             // provisionButton
             // 
             this.provisionButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.provisionButton.Location = new System.Drawing.Point(407, 331);
+            this.provisionButton.Location = new System.Drawing.Point(422, 331);
             this.provisionButton.Name = "provisionButton";
             this.provisionButton.Size = new System.Drawing.Size(299, 145);
             this.provisionButton.TabIndex = 2;
@@ -76,7 +76,7 @@
             // sellingButton
             // 
             this.sellingButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellingButton.Location = new System.Drawing.Point(773, 331);
+            this.sellingButton.Location = new System.Drawing.Point(808, 331);
             this.sellingButton.Name = "sellingButton";
             this.sellingButton.Size = new System.Drawing.Size(299, 145);
             this.sellingButton.TabIndex = 3;
