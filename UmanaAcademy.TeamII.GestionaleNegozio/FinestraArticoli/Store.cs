@@ -67,7 +67,19 @@ namespace FinestraArticoli
                 csvWriter.WriteRecords<Articolo>(articoli);
             }
         }
+        public Mail GetMail(List<OrdineArticolo> ordine)
+        {
+            string dateTime = DateTime.Today.ToString();
+            var mail = new Mail();
+            mail.From = "MiTiToni@gmail.com";
+            mail.To = "FornitoreNegozio@gmail.com";
+            mail.MailObj = "Rifornimento merce del " + dateTime;
+            foreach(OrdineArticolo articolo in ordine)
+            {
 
+            }
+            return mail;
+        }
         internal static void SaveDataGrid(object saveFileDialog, List<Articolo> articoli)
         {
             throw new NotImplementedException();

@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Model\ArticoloMap.cs" />
     <Compile Include="Model\Mail.cs" />
+    <Compile Include="Model\OrdineArticolo.cs" />
     <Compile Include="ProvisionWindow.cs">
       <SubType>Form</SubType>
     </Compile>
