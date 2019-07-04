@@ -27,14 +27,14 @@ namespace FinestraArticoli
         {
             if ((tabControl.SelectedTab == tabPageVisual) || (tabControl.SelectedTab == tabPageProvision) || (tabControl.SelectedTab == tabPageSelling))
             {
-                tabControl.SelectedTab = tabPageInitial;
-                MessageBox.Show("Seleziona un pulsante.");
+                tabControl.SelectedIndex = actualTabPage;
+                MessageBox.Show("Cambia scheda nella pagina iniziale");
             }
         }
 
         private void TabPageInitial_Click(object sender, EventArgs e)
         {
-
+            actualTabPage = 0;
         }
         private void VisualButton_Click(object sender, EventArgs e)
         {
@@ -49,15 +49,18 @@ namespace FinestraArticoli
                 dataGV.DataSource = articoli;
             }
         }
-
-        private void Label_Click(object sender, EventArgs e)
+        private void ProvisionButton_Click(object sender, EventArgs e)
         {
-
+            actualTabPage = 2;
+            tabControl.SelectedTab = tabPageProvision;
+        }
+        private void SellingButton_Click(object sender, EventArgs e)
+        {
+            actualTabPage = 3;
+            tabControl.SelectedTab = tabPageSelling;
         }
 
-
-
-        private void ProvisionButton_Click(object sender, EventArgs e)
+        private void Label_Click(object sender, EventArgs e)
         {
 
         }
@@ -70,11 +73,6 @@ namespace FinestraArticoli
         private void Window_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            Store.SaveDataGrid(saveFileDialog, articoli);
         }
 
         private void SaveProductsButton_Click(object sender, EventArgs e)
