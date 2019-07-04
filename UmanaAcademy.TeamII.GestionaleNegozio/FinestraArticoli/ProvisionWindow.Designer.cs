@@ -52,6 +52,7 @@
             this.provisionLabel.TabIndex = 7;
             this.provisionLabel.Text = "Rifornimento";
             this.provisionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.provisionLabel.Click += new System.EventHandler(this.ProvisionLabel_Click);
             // 
             // provisionButton
             // 

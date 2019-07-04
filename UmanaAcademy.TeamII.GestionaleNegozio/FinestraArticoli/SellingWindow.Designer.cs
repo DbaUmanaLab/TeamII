@@ -76,6 +76,7 @@
             this.MaximizeBox = false;
             this.Name = "SellingWindow";
             this.Text = "Vendita";
+            this.Load += new System.EventHandler(this.SellingWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sellingDataGV)).EndInit();
             this.ResumeLayout(false);
 
