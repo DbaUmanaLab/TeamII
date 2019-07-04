@@ -44,6 +44,7 @@
             this.saveProductsButton.TabIndex = 5;
             this.saveProductsButton.Text = "Salva";
             this.saveProductsButton.UseVisualStyleBackColor = true;
+            this.saveFileDialog.FileName = "products.csv";
             this.saveProductsButton.Click += new System.EventHandler(this.SaveProductsButton_Click);
             // 
             // visualDataGV
@@ -79,6 +80,7 @@
             this.MaximizeBox = false;
             this.Name = "VisualWindow";
             this.Text = "Visualizzazione Articoli";
+            this.Load += new System.EventHandler(this.VisualWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.visualDataGV)).EndInit();
             this.ResumeLayout(false);
 
