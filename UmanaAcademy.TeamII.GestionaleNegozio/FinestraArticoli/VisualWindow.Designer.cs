@@ -38,13 +38,12 @@
             // saveProductsButton
             // 
             this.saveProductsButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveProductsButton.Location = new System.Drawing.Point(402, 684);
+            this.saveProductsButton.Location = new System.Drawing.Point(403, 688);
             this.saveProductsButton.Name = "saveProductsButton";
             this.saveProductsButton.Size = new System.Drawing.Size(299, 91);
             this.saveProductsButton.TabIndex = 5;
             this.saveProductsButton.Text = "Salva";
             this.saveProductsButton.UseVisualStyleBackColor = true;
-            this.saveFileDialog.FileName = "products.csv";
             this.saveProductsButton.Click += new System.EventHandler(this.SaveProductsButton_Click);
             // 
             // visualDataGV
@@ -55,6 +54,7 @@
             this.visualDataGV.Name = "visualDataGV";
             this.visualDataGV.Size = new System.Drawing.Size(1079, 603);
             this.visualDataGV.TabIndex = 4;
+            this.visualDataGV.CellFormatting += this.VisualDataGV_CellFormatting;
             // 
             // visualLabel
             // 
@@ -66,6 +66,10 @@
             this.visualLabel.Text = "Visualizza e Modifica Articoli";
             this.visualLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.visualLabel.Click += new System.EventHandler(this.VisualLabel_Click);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.FileName = "products.csv";
             // 
             // VisualWindow
             // 

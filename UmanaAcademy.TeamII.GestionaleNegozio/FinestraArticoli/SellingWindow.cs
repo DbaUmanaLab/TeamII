@@ -27,6 +27,11 @@ namespace FinestraArticoli
                 csv.Configuration.Delimiter = ",";
                 csv.Read();
                 articoli = csv.GetRecords<Articolo>().ToList();
+
+                Store store = new Store();
+
+                store.MarkOutOfStockProducts(articoli);
+
                 sellingDataGV.DataSource = articoli;
             }
         }

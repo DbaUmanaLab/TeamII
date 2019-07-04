@@ -12,10 +12,8 @@ namespace FinestraArticoli
 {
     public class Store
     {
-        public void MarkOutOfStockProducts(Articolo[] articles)
+        public void MarkOutOfStockProducts(List<Articolo> articles)
         {
-
-
             foreach (Articolo article in articles)  //article diventa la variabile di controllo di Articolo//
             {
                 if (article.Stock < 20)
@@ -74,7 +72,7 @@ namespace FinestraArticoli
             mail.From = "MiTiToni@gmail.com";
             mail.To = "FornitoreNegozio@gmail.com";
             mail.MailObj = "Rifornimento merce del " + dateTime;
-            foreach(OrdineArticolo articolo in ordine)
+            foreach (OrdineArticolo articolo in ordine)
             {
 
             }

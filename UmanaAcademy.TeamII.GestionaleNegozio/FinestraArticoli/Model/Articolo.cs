@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FinestraArticoli.Model
 {
-    public    class Articolo
+    public class Articolo
     {
         [Index(0)]
         public string Type { get; set; }
@@ -19,7 +19,7 @@ namespace FinestraArticoli.Model
         public string Name { get; set; }
 
         [Index(5)]
-        public string Visibility{ get; set; }
+        public string Visibility { get; set; }
 
         [Index(7)]
         public string Description { get; set; }
