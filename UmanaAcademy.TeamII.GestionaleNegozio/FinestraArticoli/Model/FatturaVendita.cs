@@ -9,39 +9,39 @@ namespace FinestraArticoli.Model
     
         public class FatturaVendita
         {
-            string Cliente;
-            List<int> Quantità;
-            List<Articolo> Articoli;
-            List<double> Prezzi;
+            string Customer;
+            List<int> Quantity;
+            List<Articolo> Articles;
+            List<double> Prices;
 
-            public FatturaVendita(string cliente, int quantità, List<Articolo> articoli)
+            public FatturaVendita(string customer, List<int> quantity, List<Articolo> articles)
             {
-                Azienda = "Mi Ti & Toni \n Via Osteria n.1000 \n  3140 Camalò (TV) \n P.IVA 123456789 \n Tel. 369.2244555 ";
-                this.Cliente = cliente;
-                this.Quantità = new List<int>();
-                this.Articoli = articoli;
+                Company = "Mi Ti & Toni \n Via Osteria n.1000 \n  3140 Camalò (TV) \n P.IVA 123456789 \n Tel. 369.2244555 ";
+                this.Customer = customer;
+                this.Quantity = quantity;
+                this.Articles = articles;
 
-                this.Prezzi = new List<double>();
-                foreach (Articolo articolo in articoli)
-                    this.Prezzi.Add(articolo.Price ?? 0);
+                this.Prices = new List<double>();
+                foreach (Articolo articolo in articles)
+                    this.Prices.Add(articolo.Price ?? 0);
 
             }
 
-            public string Azienda { get; set; }
+            public string Company { get; set; }
 
-            public double Totale
+            public double Total
             {
-                get { return Totale; }
+                get { return Total; }
 
-                set { Totale = Prezzi.Sum(); }
+                set { Total = Prices.Sum(); }
 
             }
 
-            public DateTime Data
+            public DateTime Date
             {
                 get { return DateTime.Today; }
 
-                set { Data = DateTime.Today; }
+                set { Date = DateTime.Today; }
 
             }
 
