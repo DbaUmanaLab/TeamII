@@ -8,41 +8,41 @@ namespace FinestraArticoli.Model
 {
     public class FatturaAcquisti
     {
-
+        
             
-            List<int> Quantità;
-            List<Articolo> Articoli;
-            List<double> Prezzi;
+            List<int> Quantity;
+            List<Articolo> Articles;
+            List<double> Prices;
 
-            public FatturaAcquisti(string cliente, int quantità, List<Articolo> articoli)
+            public FatturaAcquisti(string customer, List<Articolo> articles, List<int> quantity)
             {
-                Azienda = "Te Fornise Mi S.P.A \n Via Delle Zoccole n.69 \n  3140 Venegazù (TV) \n P.IVA 123454569 \n Tel. 369.2244699 ";
-                Cliente = "Mi Ti & Toni S.R.L. \n Via Osteria n.1000 \n  3140 Camalò (TV) \n P.IVA 123456789 \n Tel. 369.2244555 ";
-                this.Quantità = new List<int>();
-                this.Articoli = articoli;
+                Company = "Te Fornise Mi S.P.A \n Via Delle Zoccole n.69 \n  3140 Venegazù (TV) \n P.IVA 123454569 \n Tel. 369.2244699 ";
+                Customer = "Mi Ti & Toni S.R.L. \n Via Osteria n.1000 \n  3140 Camalò (TV) \n P.IVA 123456789 \n Tel. 369.2244555 ";
+                this.Quantity = quantity;
+                this.Articles = articles;
 
-                this.Prezzi = new List<double>();
-                foreach (Articolo articolo in articoli)
-                    this.Prezzi.Add(articolo.Price ?? 0);
+                this.Prices = new List<double>();
+                foreach (Articolo articolo in articles)
+                    this.Prices.Add(articolo.Price ?? 0);
 
             }
 
-            public string Azienda { get; set; }
-            public string Cliente { get; set; }
+            public string Company { get; set; }
+            public string Customer { get; set; }
 
-            public double Totale
+            public double Total
             {
-                get { return Totale; }
+                get { return Total; }
 
-                set { Totale = Prezzi.Sum(); }
+                set { Total = Prices.Sum(); }
 
             }
 
-            public DateTime Data
+            public DateTime Date
             {
                 get { return DateTime.Today; }
 
-                set { Data = DateTime.Today; }
+                set { Date= DateTime.Today; }
 
             }
 
