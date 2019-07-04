@@ -38,7 +38,7 @@
             // saveProductsButton
             // 
             this.saveProductsButton.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveProductsButton.Location = new System.Drawing.Point(363, 684);
+            this.saveProductsButton.Location = new System.Drawing.Point(402, 684);
             this.saveProductsButton.Name = "saveProductsButton";
             this.saveProductsButton.Size = new System.Drawing.Size(299, 91);
             this.saveProductsButton.TabIndex = 5;
@@ -52,7 +52,7 @@
             this.visualDataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.visualDataGV.Location = new System.Drawing.Point(12, 75);
             this.visualDataGV.Name = "visualDataGV";
-            this.visualDataGV.Size = new System.Drawing.Size(1001, 603);
+            this.visualDataGV.Size = new System.Drawing.Size(1079, 603);
             this.visualDataGV.TabIndex = 4;
             // 
             // visualLabel
@@ -60,7 +60,7 @@
             this.visualLabel.Font = new System.Drawing.Font("MV Boli", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visualLabel.Location = new System.Drawing.Point(12, 22);
             this.visualLabel.Name = "visualLabel";
-            this.visualLabel.Size = new System.Drawing.Size(1001, 35);
+            this.visualLabel.Size = new System.Drawing.Size(1079, 35);
             this.visualLabel.TabIndex = 6;
             this.visualLabel.Text = "Visualizza e Modifica Articoli";
             this.visualLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1025, 791);
+            this.ClientSize = new System.Drawing.Size(1103, 791);
             this.Controls.Add(this.visualLabel);
             this.Controls.Add(this.saveProductsButton);
             this.Controls.Add(this.visualDataGV);
