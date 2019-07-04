@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.saveProductsButton = new System.Windows.Forms.Button();
-            this.dataGV = new System.Windows.Forms.DataGridView();
+            this.visualDataGV = new System.Windows.Forms.DataGridView();
             this.visualLabel = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visualDataGV)).BeginInit();
             this.SuspendLayout();
             // 
             // saveProductsButton
@@ -46,14 +46,14 @@
             this.saveProductsButton.UseVisualStyleBackColor = true;
             this.saveProductsButton.Click += new System.EventHandler(this.SaveProductsButton_Click);
             // 
-            // dataGV
+            // visualDataGV
             // 
-            this.dataGV.BackgroundColor = System.Drawing.Color.White;
-            this.dataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGV.Location = new System.Drawing.Point(12, 79);
-            this.dataGV.Name = "dataGV";
-            this.dataGV.Size = new System.Drawing.Size(1001, 603);
-            this.dataGV.TabIndex = 4;
+            this.visualDataGV.BackgroundColor = System.Drawing.Color.White;
+            this.visualDataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.visualDataGV.Location = new System.Drawing.Point(12, 79);
+            this.visualDataGV.Name = "visualDataGV";
+            this.visualDataGV.Size = new System.Drawing.Size(1001, 603);
+            this.visualDataGV.TabIndex = 4;
             // 
             // visualLabel
             // 
@@ -74,12 +74,12 @@
             this.ClientSize = new System.Drawing.Size(1025, 791);
             this.Controls.Add(this.visualLabel);
             this.Controls.Add(this.saveProductsButton);
-            this.Controls.Add(this.dataGV);
+            this.Controls.Add(this.visualDataGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "VisualWindow";
             this.Text = "Visualizzazione Articoli";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visualDataGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,7 +87,7 @@
         #endregion
 
         private System.Windows.Forms.Button saveProductsButton;
-        private System.Windows.Forms.DataGridView dataGV;
+        private System.Windows.Forms.DataGridView visualDataGV;
         private System.Windows.Forms.Label visualLabel;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }

@@ -26,7 +26,7 @@ namespace FinestraArticoli
                 csv.Configuration.Delimiter = ",";
                 csv.Read();
                 articoli = csv.GetRecords<Articolo>().ToList();
-                dataGV.DataSource = articoli;
+                visualDataGV.DataSource = articoli;
             }
         }
         private void SaveProductsButton_Click(object sender, EventArgs e)
