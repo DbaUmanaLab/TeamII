@@ -16,31 +16,57 @@ namespace FinestraArticoli
     public partial class window : Form
     {
 
+        private int actualTabPage = 0;
+        private List<Articolo> articoli;
+
         public window()
         {
             InitializeComponent();
         }
+        private void tabControl_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if ((tabControl.SelectedTab == tabPageVisual) || (tabControl.SelectedTab == tabPageProvision) || (tabControl.SelectedTab == tabPageSelling))
+            {
+                tabControl.SelectedIndex = actualTabPage;
+                MessageBox.Show("Cambia scheda nella pagina iniziale.");
+            }
+            else
+                actualTabPage = 0;
+        }
 
+        private void TabPageInitial_Click(object sender, EventArgs e)
+        {
+            actualTabPage = 0;
+        }
         private void VisualButton_Click(object sender, EventArgs e)
         {
-            using (var form = new VisualWindow())
+            actualTabPage = 1;
+            tabControl.SelectedTab = tabPageVisual;
+            using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
+            using (var csv = new CsvReader(reader))
             {
-                form.ShowDialog();
+                csv.Configuration.RegisterClassMap<ArticoloMap>();
+                csv.Configuration.Delimiter = ",";
+                csv.Read();
+
+                articoli = csv.GetRecords<Articolo>().ToList();
+                dataGV.DataSource = articoli;
             }
         }
         private void ProvisionButton_Click(object sender, EventArgs e)
         {
-            using (var form = new ProvisionWindow())
-            {
-                form.ShowDialog();
-            }
+            actualTabPage = 2;
+            tabControl.SelectedTab = tabPageProvision;
         }
         private void SellingButton_Click(object sender, EventArgs e)
         {
-            using (var form = new SellingWindow())
-            {
-                form.ShowDialog();
-            }
+            actualTabPage = 3;
+            tabControl.SelectedTab = tabPageSelling;
+        }
+
+        private void Label_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void DataGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -53,13 +79,9 @@ namespace FinestraArticoli
 
         }
 
-        private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
+        private void SaveProductsButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void TitleLabel_Click(object sender, EventArgs e)
-        {
+            Store.SaveDataGrid(saveFileDialog, articoli);
 
         }
     }
