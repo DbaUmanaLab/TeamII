@@ -40,5 +40,10 @@ namespace FinestraArticoli
         {
 
         }
+
+        private void VisualWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
