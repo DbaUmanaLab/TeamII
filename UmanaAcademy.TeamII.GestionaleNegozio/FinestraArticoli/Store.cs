@@ -12,7 +12,7 @@ namespace FinestraArticoli
 {
     public class Store
     {
-        public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<Articolo> articoli)
+        public static void VisualSaveDataGrid(SaveFileDialog saveFileDialog, List<Articolo> articoli)
         {
             saveFileDialog.FileName = "Files\\Magazzino\\products.csv";
             using (var writer = new StreamWriter(saveFileDialog.FileName))
@@ -23,9 +23,10 @@ namespace FinestraArticoli
                 csvWriter.WriteRecords<Articolo>(articoli);
             }
         }
-        public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<OrdineArticolo> articoliTemp, bool add)
+        public static bool SaveDataGrid(SaveFileDialog saveFileDialog, List<OrdineArticolo> articoliTemp, bool add)
         {
             List<Articolo> articoli = new List<Articolo>();
+            bool saveOK = true;
             foreach (OrdineArticolo ordArt in articoliTemp)
             {
                 if (add)
@@ -57,17 +58,26 @@ namespace FinestraArticoli
                         Categories = ordArt.Categories
                     };
                     articoli.Add(art);
+                    if (art.Stock < 0)
+                        saveOK = false;
                 }
-
             }
-            saveFileDialog.FileName = "Files\\Magazzino\\products.csv";
-            using (var writer = new StreamWriter(saveFileDialog.FileName))
-            using (var csvWriter = new CsvWriter(writer))
+            if (saveOK)
             {
-                csvWriter.Configuration.Delimiter = ",";
-                csvWriter.Flush();
-                csvWriter.WriteRecords<Articolo>(articoli);
+                saveFileDialog.FileName = "Files\\Magazzino\\products.csv";
+                using (var writer = new StreamWriter(saveFileDialog.FileName))
+                using (var csvWriter = new CsvWriter(writer))
+                {
+                    csvWriter.Configuration.Delimiter = ",";
+                    csvWriter.Flush();
+                    csvWriter.WriteRecords<Articolo>(articoli);
+                }
             }
+            else
+            {
+                MessageBox.Show("OPERAZIONE IMPOSSIBILE DA ESEGUIRE.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return saveOK;
         }
         public Mail GetMail(List<OrdineArticolo> ordine)
         {

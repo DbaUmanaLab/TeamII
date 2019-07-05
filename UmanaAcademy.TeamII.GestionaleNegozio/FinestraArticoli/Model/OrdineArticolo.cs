@@ -9,7 +9,6 @@ namespace FinestraArticoli.Model
 {
      public  class OrdineArticolo
     {
-
         [Index(0)]
         public string Type { get; set; }
 
@@ -38,6 +37,7 @@ namespace FinestraArticoli.Model
         //[Index(23)]
         [Index(7)]
         public string Categories { get; set; }
+        public int Quantity { get; set; }
 
         //public string SupplierMail { get; set; }
 
@@ -45,7 +45,5 @@ namespace FinestraArticoli.Model
 
         //public string buyerName { get; set; }
 
-        public int Quantity { get; set; }
-        
     }
 }

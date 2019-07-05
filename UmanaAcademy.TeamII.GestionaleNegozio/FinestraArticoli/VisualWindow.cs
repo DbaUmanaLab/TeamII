@@ -30,7 +30,7 @@ namespace FinestraArticoli
         }
         private void SaveProductsButton_Click(object sender, EventArgs e)
         {
-            Store.SaveDataGrid(saveFileDialog, articoli);
+            Store.VisualSaveDataGrid(saveFileDialog, articoli);
             this.Close();
         }
 
@@ -76,7 +76,7 @@ namespace FinestraArticoli
 
         private void VisualDataGV_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            MessageBox.Show("INSERISCI UN CARATTERE VALIDO.");
+            MessageBox.Show("INSERISCI UN CARATTERE VALIDO.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error );
         }
 
         private void VisualLabel_Click(object sender, EventArgs e)

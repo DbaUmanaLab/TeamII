@@ -2,6 +2,7 @@
 using FinestraArticoli.Model;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace FinestraArticoli
         public SellingWindow()
         {
             InitializeComponent();
+            this.sellingDataGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.SellingDataGV_CellFormatting);
 
             using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
             using (var csv = new CsvReader(reader))
@@ -26,15 +28,30 @@ namespace FinestraArticoli
                     this.sellingDataGV.Columns[i].ReadOnly = true;
             }
         }
+        private void SellingDataGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            OrdineArticolo articolo = sellingDataGV.Rows[e.RowIndex].DataBoundItem as OrdineArticolo;
+
+            if (articolo.Stock < articolo.Quantity)
+            {
+                sellingDataGV.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                e.CellStyle.BackColor = Color.Red;
+            }
+            else
+            {
+                sellingDataGV.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+                e.CellStyle.BackColor = Color.White;
+            }
+        }
+        private void SellingButton_Click(object sender, EventArgs e)
+        {
+            if (Store.SaveDataGrid(saveFileDialog, articoli, false))
+                this.Close();
+        }
 
         private void SellingWindow_Load(object sender, EventArgs e)
         {
 
-        }
-        private void SellingButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Store.SaveDataGrid(saveFileDialog, articoli, false);
         }
     }
 }

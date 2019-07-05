@@ -59,8 +59,8 @@ namespace FinestraArticoli
 
         private void ProvisionButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Store.SaveDataGrid(saveFileDialog, articoli, true);
+            if (Store.SaveDataGrid(saveFileDialog, articoli, true))
+                this.Close();
         }
 
         private void ProvisionLabel_Click(object sender, EventArgs e)
