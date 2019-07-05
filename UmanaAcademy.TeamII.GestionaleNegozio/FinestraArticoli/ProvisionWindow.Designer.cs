@@ -31,6 +31,7 @@
             this.provisionDataGV = new System.Windows.Forms.DataGridView();
             this.provisionLabel = new System.Windows.Forms.Label();
             this.provisionButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.provisionDataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,6 @@
             this.provisionDataGV.Name = "provisionDataGV";
             this.provisionDataGV.Size = new System.Drawing.Size(1001, 603);
             this.provisionDataGV.TabIndex = 0;
-            this.provisionDataGV.CellFormatting += this.ProvisionDataGV_CellFormatting;
             // 
             // provisionLabel
             // 
@@ -65,6 +65,11 @@
             this.provisionButton.Text = "Compra";
             this.provisionButton.UseVisualStyleBackColor = true;
             this.provisionButton.Click += new System.EventHandler(this.ProvisionButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // ProvisionWindow
             // 
@@ -90,5 +95,6 @@
         private System.Windows.Forms.DataGridView provisionDataGV;
         private System.Windows.Forms.Label provisionLabel;
         private System.Windows.Forms.Button provisionButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

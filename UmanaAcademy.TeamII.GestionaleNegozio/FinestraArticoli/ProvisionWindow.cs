@@ -15,13 +15,13 @@ namespace FinestraArticoli
         public ProvisionWindow()
         {
             InitializeComponent();
+            this.provisionDataGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.ProvisionDataGV_CellFormatting);
 
             using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
             using (var csv = new CsvReader(reader))
             {
                 csv.Configuration.RegisterClassMap<OrdineArticoloMap>();
                 csv.Configuration.Delimiter = ",";
-                csv.Read();
                 articoli = csv.GetRecords<OrdineArticolo>().ToList();
                 provisionDataGV.DataSource = articoli;
                 for (int i = 0; i < 8; i++)
@@ -60,6 +60,11 @@ namespace FinestraArticoli
         }
 
         private void ProvisionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }

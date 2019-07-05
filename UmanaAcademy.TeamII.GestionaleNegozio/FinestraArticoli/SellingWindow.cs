@@ -20,7 +20,6 @@ namespace FinestraArticoli
             {
                 csv.Configuration.RegisterClassMap<OrdineArticoloMap>();
                 csv.Configuration.Delimiter = ",";
-                csv.Read();
                 articoli = csv.GetRecords<OrdineArticolo>().ToList();
                 sellingDataGV.DataSource = articoli;
                 for (int i = 0; i < 8; i++)

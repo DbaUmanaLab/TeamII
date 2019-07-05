@@ -23,7 +23,6 @@ namespace FinestraArticoli
             {
                 //csv.Configuration.RegisterClassMap<ArticoloMap>();
                 csv.Configuration.Delimiter = ",";
-                csv.Read();
                 articoli = csv.GetRecords<Articolo>().ToList();
                 visualDataGV.DataSource = articoli;
                 reader.Close();
