@@ -27,6 +27,9 @@ namespace FinestraArticoli
             {
                 form.ShowDialog();
             }
+            File.WriteAllText("Files\\Magazzino\\products.csv", File.ReadAllText("Files\\Magazzino\\productsTemp.csv").ToString());
+            //File.Move("Files\\Magazzino\\productsTemp.csv", "Files\\Magazzino\\products.csv");
+            File.Delete("Files\\Magazzino\\productsTemp.csv");
         }
         private void ProvisionButton_Click(object sender, EventArgs e)
         {

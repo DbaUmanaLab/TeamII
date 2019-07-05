@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VisualWindow_Closing);
+
+
             this.saveProductsButton = new System.Windows.Forms.Button();
             this.visualDataGV = new System.Windows.Forms.DataGridView();
             this.visualLabel = new System.Windows.Forms.Label();
@@ -55,6 +58,7 @@
             this.visualDataGV.Size = new System.Drawing.Size(1079, 603);
             this.visualDataGV.TabIndex = 4;
             this.visualDataGV.CellFormatting += this.VisualDataGV_CellFormatting;
+            this.visualDataGV.DataError += this.VisualDataGV_DataError;
             // 
             // visualLabel
             // 

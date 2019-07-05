@@ -2,20 +2,15 @@
 using FinestraArticoli.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinestraArticoli
 {
     public partial class SellingWindow : Form
     {
-        private List<Articolo> articoli;
+        private List<OrdineArticolo> articoli;
         public SellingWindow()
         {
             InitializeComponent();
@@ -23,16 +18,13 @@ namespace FinestraArticoli
             using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
             using (var csv = new CsvReader(reader))
             {
-                csv.Configuration.RegisterClassMap<ArticoloMap>();
+                csv.Configuration.RegisterClassMap<OrdineArticoloMap>();
                 csv.Configuration.Delimiter = ",";
                 csv.Read();
-                articoli = csv.GetRecords<Articolo>().ToList();
-
-                Store store = new Store();
-
-                store.MarkOutOfStockProducts(articoli);
-
+                articoli = csv.GetRecords<OrdineArticolo>().ToList();
                 sellingDataGV.DataSource = articoli;
+                for (int i = 0; i < 8; i++)
+                    this.sellingDataGV.Columns[i].ReadOnly = true;
             }
         }
 

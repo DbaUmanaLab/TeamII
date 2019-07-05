@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ArticoloMap.cs" />
+    <Compile Include="Model\OrdineArticoloMap.cs" />
     <Compile Include="Model\FatturaAcquisti.cs" />
     <Compile Include="Model\FatturaVendita.cs" />
     <Compile Include="Model\Mail.cs" />

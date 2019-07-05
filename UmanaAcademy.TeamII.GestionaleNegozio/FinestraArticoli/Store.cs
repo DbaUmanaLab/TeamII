@@ -12,52 +12,53 @@ namespace FinestraArticoli
 {
     public class Store
     {
-        public void MarkOutOfStockProducts(List<Articolo> articles)
-        {
-            foreach (Articolo article in articles)  //article diventa la variabile di controllo di Articolo//
-            {
-                if (article.Stock < 20)
-                {
-                    Console.WriteLine($"Articolo in esaurimento. Contatta fornitore per {article.Type},{article.Name},{article.Sku} ");
-                    Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
+        //public void MarkOutOfStockProducts(List<Articolo> articles)
+        //{
+        //    foreach (Articolo article in articles)  //article diventa la variabile di controllo di Articolo//
+        //    {
+        //        if (article.Stock < 20)
+        //        {
+        //            Console.WriteLine($"Articolo in esaurimento. Contatta fornitore per {article.Type},{article.Name},{article.Sku} ");
+        //            Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
 
-                    article.OutOfStock = true;
+        //            article.OutOfStock = true;
 
-                }
-                else if (article.Stock >= 20 || article.Stock < 30)
-                {
-                    Console.WriteLine($"{article.Type},{article.Name},{article.Sku} presente ma in esaurimento, contattare il fornitore a breve \n ");
+        //        }
+        //        else if (article.Stock >= 20 || article.Stock < 30)
+        //        {
+        //            Console.WriteLine($"{article.Type},{article.Name},{article.Sku} presente ma in esaurimento, contattare il fornitore a breve \n ");
 
-                    Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
+        //            Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
 
-                    article.OutOfStock = true;
-                }
-                else if (article.Stock >= 30)
-                {
-                    Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
-                    article.OutOfStock = false;
-                }
-            }
+        //            article.OutOfStock = true;
+        //        }
+        //        else if (article.Stock >= 30)
+        //        {
+        //            Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
+        //            article.OutOfStock = false;
+        //        }
+        //    }
 
-            foreach (Articolo article in articles)
+        //    foreach (Articolo article in articles)
 
-            {
-                if (article.OutOfStock == true)
-                {
-                    if (article.Stock < 20)
-                        article.StockRunningOut = "Contattare il fornitore con urgenza";
-                }
-                else
-                {
-                    article.StockRunningOut = "Articolo in via di esaurimento. Contattare il fornitore a breve";
-                }
-            }
-        }
+        //    {
+        //        if (article.OutOfStock == true)
+        //        {
+        //            if (article.Stock < 20)
+        //                article.StockRunningOut = "Contattare il fornitore con urgenza";
+        //        }
+        //        else
+        //        {
+        //            article.StockRunningOut = "Articolo in via di esaurimento. Contattare il fornitore a breve";
+        //        }
+        //    }
+        //}
         public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<Articolo> articoli)
         {
             DialogResult result = saveFileDialog.ShowDialog();
             if (!DialogResult.OK.Equals(result))
                 return;
+            //saveFileDialog.FileName = "Files\\Magazzino\\productsTemp.csv";
             using (var writer = new StreamWriter(saveFileDialog.FileName))
             using (var csvWriter = new CsvWriter(writer))
             {

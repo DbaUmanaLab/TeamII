@@ -18,23 +18,29 @@ namespace FinestraArticoli.Model
         [Index(2)]
         public string Name { get; set; }
 
-        [Index(5)]
+        //[Index(5)]
+        [Index(3)]
         public string Visibility { get; set; }
 
-        [Index(7)]
+        //[Index(7)]
+        [Index(4)]
         public string Description { get; set; }
 
-        [Index(12)]
+        //[Index(12)]
+        [Index(5)]
         public int? Stock { get; set; }
 
-        [Index(15)]
+        //[Index(22)]
+        [Index(6)]
         public double? Price { get; set; }
 
-        [Index(21)]
-        public double? Categories { get; set; }
-        public bool OutOfStock { get; set; }
+        //[Index(23)]
+        [Index(7)]
+        public string Categories { get; set; }
 
-        public string StockRunningOut { get; set; }
+        //public bool OutOfStock { get; set; }
+
+        //public string StockRunningOut { get; set; }
 
     }
 }

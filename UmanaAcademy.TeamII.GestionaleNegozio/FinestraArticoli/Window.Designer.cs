@@ -28,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.titleLabel = new System.Windows.Forms.Label();
             this.visualButton = new System.Windows.Forms.Button();
             this.provisionButton = new System.Windows.Forms.Button();
             this.sellingButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
             // 
             // titleLabel
             // 
@@ -104,8 +98,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button visualButton;
         private System.Windows.Forms.Button provisionButton;

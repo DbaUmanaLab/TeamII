@@ -2,20 +2,16 @@
 using FinestraArticoli.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinestraArticoli
 {
     public partial class ProvisionWindow : Form
     {
-        private List<Articolo> articoli;
+        private List<OrdineArticolo> articoli;
         public ProvisionWindow()
         {
             InitializeComponent();
@@ -23,11 +19,33 @@ namespace FinestraArticoli
             using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
             using (var csv = new CsvReader(reader))
             {
-                csv.Configuration.RegisterClassMap<ArticoloMap>();
+                csv.Configuration.RegisterClassMap<OrdineArticoloMap>();
                 csv.Configuration.Delimiter = ",";
                 csv.Read();
-                articoli = csv.GetRecords<Articolo>().ToList();
+                articoli = csv.GetRecords<OrdineArticolo>().ToList();
                 provisionDataGV.DataSource = articoli;
+                for (int i = 0; i < 8; i++)
+                    this.provisionDataGV.Columns[i].ReadOnly = true;
+            }
+        }
+        private void ProvisionDataGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            OrdineArticolo articolo = provisionDataGV.Rows[e.RowIndex].DataBoundItem as OrdineArticolo;
+
+            if (articolo.Stock <= 10 || articolo.Stock == null)
+            {
+                provisionDataGV.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                e.CellStyle.BackColor = Color.Red;
+            }
+            else if (articolo.Stock > 10 && articolo.Stock <= 50)
+            {
+                provisionDataGV.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                e.CellStyle.BackColor = Color.Yellow;
+            }
+            else
+            {
+                provisionDataGV.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+                e.CellStyle.BackColor = Color.White;
             }
         }
 

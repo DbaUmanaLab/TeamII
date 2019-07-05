@@ -42,6 +42,7 @@
             this.provisionDataGV.Name = "provisionDataGV";
             this.provisionDataGV.Size = new System.Drawing.Size(1001, 603);
             this.provisionDataGV.TabIndex = 0;
+            this.provisionDataGV.CellFormatting += this.ProvisionDataGV_CellFormatting;
             // 
             // provisionLabel
             // 

@@ -7,14 +7,16 @@ using CsvHelper.Configuration;
 
 namespace FinestraArticoli.Model
 {
-    public class ArticoloMap : ClassMap<Articolo>
+    public class OrdineArticoloMap : ClassMap<OrdineArticolo>
     {
-        public ArticoloMap()
+        public OrdineArticoloMap()
         {
             AutoMap();
 
-            Map(a => a.OutOfStock).Ignore();
-            Map(a => a.StockRunningOut).Ignore();
+            Map(a => a.Quantity).Ignore();
+
+            //Map(a => a.OutOfStock).Ignore();
+            //Map(a => a.StockRunningOut).Ignore();
         }
     }
 }
