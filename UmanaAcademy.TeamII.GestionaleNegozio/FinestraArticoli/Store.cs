@@ -55,14 +55,12 @@ namespace FinestraArticoli
         //}
         public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<Articolo> articoli)
         {
-            DialogResult result = saveFileDialog.ShowDialog();
-            if (!DialogResult.OK.Equals(result))
-                return;
-            //saveFileDialog.FileName = "Files\\Magazzino\\productsTemp.csv";
+            saveFileDialog.FileName = "Files\\Magazzino\\products.csv";
             using (var writer = new StreamWriter(saveFileDialog.FileName))
             using (var csvWriter = new CsvWriter(writer))
             {
                 csvWriter.Configuration.Delimiter = ",";
+                csvWriter.Flush();
                 csvWriter.WriteRecords<Articolo>(articoli);
             }
         }

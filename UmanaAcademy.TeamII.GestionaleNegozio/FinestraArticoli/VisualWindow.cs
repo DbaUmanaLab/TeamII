@@ -16,7 +16,7 @@ namespace FinestraArticoli
         {
             InitializeComponent();
 
-            this.visualDataGV.CellFormatting += this.VisualDataGV_CellFormatting;
+            this.visualDataGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.VisualDataGV_CellFormatting);
 
             using (var reader = new StreamReader("Files\\Magazzino\\products.csv"))
             using (var csv = new CsvReader(reader))

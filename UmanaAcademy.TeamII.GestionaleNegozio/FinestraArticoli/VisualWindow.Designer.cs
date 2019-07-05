@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VisualWindow_Closing);
-
-
             this.saveProductsButton = new System.Windows.Forms.Button();
             this.visualDataGV = new System.Windows.Forms.DataGridView();
             this.visualLabel = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.visualDataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,8 +55,7 @@
             this.visualDataGV.Name = "visualDataGV";
             this.visualDataGV.Size = new System.Drawing.Size(1079, 603);
             this.visualDataGV.TabIndex = 4;
-            this.visualDataGV.CellFormatting += this.VisualDataGV_CellFormatting;
-            this.visualDataGV.DataError += this.VisualDataGV_DataError;
+            this.visualDataGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.VisualDataGV_CellFormatting);
             // 
             // visualLabel
             // 
@@ -75,6 +72,10 @@
             // 
             this.saveFileDialog.FileName = "products.csv";
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "products.csv";
+            // 
             // VisualWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +89,7 @@
             this.MaximizeBox = false;
             this.Name = "VisualWindow";
             this.Text = "Visualizzazione Articoli";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VisualWindow_Closing);
             this.Load += new System.EventHandler(this.VisualWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.visualDataGV)).EndInit();
             this.ResumeLayout(false);
@@ -100,5 +102,6 @@
         private System.Windows.Forms.DataGridView visualDataGV;
         private System.Windows.Forms.Label visualLabel;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
