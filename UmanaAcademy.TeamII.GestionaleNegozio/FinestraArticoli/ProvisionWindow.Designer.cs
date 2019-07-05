@@ -31,7 +31,7 @@
             this.provisionDataGV = new System.Windows.Forms.DataGridView();
             this.provisionLabel = new System.Windows.Forms.Label();
             this.provisionButton = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.provisionDataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,10 +66,9 @@
             this.provisionButton.UseVisualStyleBackColor = true;
             this.provisionButton.Click += new System.EventHandler(this.ProvisionButton_Click);
             // 
-            // openFileDialog1
+            // saveFileDialog
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
+            this.saveFileDialog.FileName = "products.csv";
             // 
             // ProvisionWindow
             // 
@@ -95,6 +94,6 @@
         private System.Windows.Forms.DataGridView provisionDataGV;
         private System.Windows.Forms.Label provisionLabel;
         private System.Windows.Forms.Button provisionButton;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

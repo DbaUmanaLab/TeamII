@@ -48,7 +48,10 @@ namespace FinestraArticoli
                 e.CellStyle.BackColor = Color.White;
             }
         }
-
+        private void ProvisionDataGV_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show("INSERISCI UN CARATTERE VALIDO.");
+        }
         private void ProvisionWindow_Load(object sender, EventArgs e)
         {
 
@@ -56,7 +59,8 @@ namespace FinestraArticoli
 
         private void ProvisionButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Store.SaveDataGrid(saveFileDialog, articoli, true);
         }
 
         private void ProvisionLabel_Click(object sender, EventArgs e)

@@ -12,6 +12,81 @@ namespace FinestraArticoli
 {
     public class Store
     {
+        public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<Articolo> articoli)
+        {
+            saveFileDialog.FileName = "Files\\Magazzino\\products.csv";
+            using (var writer = new StreamWriter(saveFileDialog.FileName))
+            using (var csvWriter = new CsvWriter(writer))
+            {
+                csvWriter.Configuration.Delimiter = ",";
+                csvWriter.Flush();
+                csvWriter.WriteRecords<Articolo>(articoli);
+            }
+        }
+        public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<OrdineArticolo> articoliTemp, bool add)
+        {
+            List<Articolo> articoli = new List<Articolo>();
+            foreach (OrdineArticolo ordArt in articoliTemp)
+            {
+                if (add)
+                {
+                    Articolo art = new Articolo()
+                    {
+                        Type = ordArt.Type,
+                        Sku = ordArt.Sku,
+                        Name = ordArt.Name,
+                        Visibility = ordArt.Visibility,
+                        Description = ordArt.Description,
+                        Stock = ordArt.Stock + ordArt.Quantity,
+                        Price = ordArt.Price,
+                        Categories = ordArt.Categories
+                    };
+                    articoli.Add(art);
+                }
+                else
+                {
+                    Articolo art = new Articolo()
+                    {
+                        Type = ordArt.Type,
+                        Sku = ordArt.Sku,
+                        Name = ordArt.Name,
+                        Visibility = ordArt.Visibility,
+                        Description = ordArt.Description,
+                        Stock = ordArt.Stock - ordArt.Quantity,
+                        Price = ordArt.Price,
+                        Categories = ordArt.Categories
+                    };
+                    articoli.Add(art);
+                }
+
+            }
+            saveFileDialog.FileName = "Files\\Magazzino\\products.csv";
+            using (var writer = new StreamWriter(saveFileDialog.FileName))
+            using (var csvWriter = new CsvWriter(writer))
+            {
+                csvWriter.Configuration.Delimiter = ",";
+                csvWriter.Flush();
+                csvWriter.WriteRecords<Articolo>(articoli);
+            }
+        }
+        public Mail GetMail(List<OrdineArticolo> ordine)
+        {
+            string dateTime = DateTime.Today.ToString();
+            var mail = new Mail();
+            mail.From = "MiTiToni@gmail.com";
+            mail.To = "FornitoreNegozio@gmail.com";
+            mail.MailObj = "Rifornimento merce del " + dateTime;
+            foreach (OrdineArticolo articolo in ordine)
+            {
+
+            }
+            return mail;
+        }
+        internal static void SaveDataGrid(object saveFileDialog, List<Articolo> articoli)
+        {
+            throw new NotImplementedException();
+        }
+
         //public void MarkOutOfStockProducts(List<Articolo> articles)
         //{
         //    foreach (Articolo article in articles)  //article diventa la variabile di controllo di Articolo//
@@ -53,33 +128,5 @@ namespace FinestraArticoli
         //        }
         //    }
         //}
-        public static void SaveDataGrid(SaveFileDialog saveFileDialog, List<Articolo> articoli)
-        {
-            saveFileDialog.FileName = "Files\\Magazzino\\products.csv";
-            using (var writer = new StreamWriter(saveFileDialog.FileName))
-            using (var csvWriter = new CsvWriter(writer))
-            {
-                csvWriter.Configuration.Delimiter = ",";
-                csvWriter.Flush();
-                csvWriter.WriteRecords<Articolo>(articoli);
-            }
-        }
-        public Mail GetMail(List<OrdineArticolo> ordine)
-        {
-            string dateTime = DateTime.Today.ToString();
-            var mail = new Mail();
-            mail.From = "MiTiToni@gmail.com";
-            mail.To = "FornitoreNegozio@gmail.com";
-            mail.MailObj = "Rifornimento merce del " + dateTime;
-            foreach (OrdineArticolo articolo in ordine)
-            {
-
-            }
-            return mail;
-        }
-        internal static void SaveDataGrid(object saveFileDialog, List<Articolo> articoli)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

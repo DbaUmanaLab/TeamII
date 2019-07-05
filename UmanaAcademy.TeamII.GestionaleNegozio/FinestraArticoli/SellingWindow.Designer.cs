@@ -31,6 +31,7 @@
             this.sellingButton = new System.Windows.Forms.Button();
             this.sellingLabel = new System.Windows.Forms.Label();
             this.sellingDataGV = new System.Windows.Forms.DataGridView();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.sellingDataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.sellingButton.TabIndex = 11;
             this.sellingButton.Text = "Vendi";
             this.sellingButton.UseVisualStyleBackColor = true;
+            this.sellingButton.Click += new System.EventHandler(this.SellingButton_Click);
             // 
             // sellingLabel
             // 
@@ -87,5 +89,6 @@
         private System.Windows.Forms.Button sellingButton;
         private System.Windows.Forms.Label sellingLabel;
         private System.Windows.Forms.DataGridView sellingDataGV;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

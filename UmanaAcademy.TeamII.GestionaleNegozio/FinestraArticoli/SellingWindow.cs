@@ -31,5 +31,10 @@ namespace FinestraArticoli
         {
 
         }
+        private void SellingButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Store.SaveDataGrid(saveFileDialog, articoli, false);
+        }
     }
 }

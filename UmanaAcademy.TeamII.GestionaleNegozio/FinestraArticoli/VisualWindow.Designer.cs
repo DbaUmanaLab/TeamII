@@ -32,7 +32,6 @@
             this.visualDataGV = new System.Windows.Forms.DataGridView();
             this.visualLabel = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.visualDataGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,10 +71,6 @@
             // 
             this.saveFileDialog.FileName = "products.csv";
             // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "products.csv";
-            // 
             // VisualWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +97,5 @@
         private System.Windows.Forms.DataGridView visualDataGV;
         private System.Windows.Forms.Label visualLabel;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
