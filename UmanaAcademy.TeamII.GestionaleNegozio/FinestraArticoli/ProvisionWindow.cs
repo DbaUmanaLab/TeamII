@@ -59,6 +59,7 @@ namespace FinestraArticoli
 
         private void ProvisionButton_Click(object sender, EventArgs e)
         {
+            Store.GetMail(articoli);
             if (Store.SaveDataGrid(saveFileDialog, articoli, true))
                 this.Close();
         }

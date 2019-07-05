@@ -126,6 +126,7 @@
   <ItemGroup>
     <Folder Include="Files\FattureRifornimento\" />
     <Folder Include="Files\FattureVendita\" />
+    <Folder Include="Files\MailRifornimento\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

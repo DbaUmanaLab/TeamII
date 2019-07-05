@@ -79,64 +79,17 @@ namespace FinestraArticoli
             }
             return saveOK;
         }
-        public Mail GetMail(List<OrdineArticolo> ordine)
+        public static void GetMail(List<OrdineArticolo> ordine)
         {
-            string dateTime = DateTime.Today.ToString();
-            var mail = new Mail();
-            mail.From = "MiTiToni@gmail.com";
-            mail.To = "FornitoreNegozio@gmail.com";
-            mail.MailObj = "Rifornimento merce del " + dateTime;
-            foreach (OrdineArticolo articolo in ordine)
+            var mail = new Mail()
             {
-
-            }
-            return mail;
+                From = "Richieste@MiTiToni.com",
+                To = "Fornitura@FornitoreNegozio.com",
+                Ordine = ordine
+            };
+            //string path = $"Files\\MailRifornimento\\{mail.DateTime.Date.Day}{mail.DateTime.Date.Month}/{mail.DateTime.Date.Year}_{mail.DateTime.Date.Hour}{mail.DateTime.Date.Minute}";
+            //File.Create(path);
+            //File.WriteAllText(path, mail.ToString());
         }
-        internal static void SaveDataGrid(object saveFileDialog, List<Articolo> articoli)
-        {
-            throw new NotImplementedException();
-        }
-
-        //public void MarkOutOfStockProducts(List<Articolo> articles)
-        //{
-        //    foreach (Articolo article in articles)  //article diventa la variabile di controllo di Articolo//
-        //    {
-        //        if (article.Stock < 20)
-        //        {
-        //            Console.WriteLine($"Articolo in esaurimento. Contatta fornitore per {article.Type},{article.Name},{article.Sku} ");
-        //            Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
-
-        //            article.OutOfStock = true;
-
-        //        }
-        //        else if (article.Stock >= 20 || article.Stock < 30)
-        //        {
-        //            Console.WriteLine($"{article.Type},{article.Name},{article.Sku} presente ma in esaurimento, contattare il fornitore a breve \n ");
-
-        //            Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
-
-        //            article.OutOfStock = true;
-        //        }
-        //        else if (article.Stock >= 30)
-        //        {
-        //            Console.WriteLine($" {article.Type},{article.Name},{article.Sku} presente in {article.Stock} esemplari  ");
-        //            article.OutOfStock = false;
-        //        }
-        //    }
-
-        //    foreach (Articolo article in articles)
-
-        //    {
-        //        if (article.OutOfStock == true)
-        //        {
-        //            if (article.Stock < 20)
-        //                article.StockRunningOut = "Contattare il fornitore con urgenza";
-        //        }
-        //        else
-        //        {
-        //            article.StockRunningOut = "Articolo in via di esaurimento. Contattare il fornitore a breve";
-        //        }
-        //    }
-        //}
     }
 }
